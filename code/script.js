@@ -13,6 +13,7 @@ function updateTime() {
   const options = {
     hour: "numeric",
     minute: "numeric",
+    second: "numeric",
     day: "numeric",
     month: "numeric",
     month: "numeric",
@@ -29,4 +30,6 @@ function updateTime() {
   ).format(now);
 }
 
-updateTime();
+setInterval(function () {
+  updateTime();
+}, 1000);
